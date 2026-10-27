@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "ready": {
+      "command": "uv",
+      "args": ["run", "--directory", "D:/projs/ready", "ready-mcp"],
+      "env": { "READY_REPO": "D:/projs/ready-demo" }
+    }
+  }
+}
