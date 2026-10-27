@@ -1,0 +1,20 @@
+name: ready-v1 (action test)
+on:
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: Issue URL to check
+        required: true
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: SirjanSingh/ready@v1
+        with:
+          issue: ${{ inputs.issue }}
